@@ -1,0 +1,39 @@
+Thought process: Imagining a remote-based Agile team, testing Requirement list layouts for ease of development
+
+Status list:
+Unassigned - Yet to be reviewed, unknown debt resolution time, user submitted
+Wishlist - Big picture, preferred scalability, major version user submitted feature requests
+Corrections - Reviewed as minor version code failure
+Failures - Reviewed as major version code failure
+
+Wishlist breakdown:
+Single Sprint - Minor functionality
+Minor Version - code change
+Major Version - system and/or infrastructure change
+
+Thought process: Wanting a database structure to list in at this point. Rough outline:
+CREATE TABLE requirements (req_id int, title_id, subject, status_id );
+
+Any given requirement should be in this format:
+<Area>,<File>,<Status>,<Time>,<succinct subject>,<complete requirement>
+
+Thought process: Rough outline is done, so I can go back and reference it when I get lost later.
+
+<Area>,<File>,<Status>,<Time>,<succinct subject>,<complete requirement>
+-----------------------------------------------------------------------
+Core Code,null,Failure,now,Figure out what language to write in,Without knowing what I'm writing in its tough to write.
+
+"User Object","user...","Wishlist",null,"User object data","user_id,user_name,password_hashlist,security_stuff.User's account includes any recordkeeping they option for. Basics are collections, actions, schedules."
+"User Object","user...","Wishlist",null,"User info: collections","Collection IDs of products. The OG offering is a card collection, with a collector's id number of 0 and a number owned of each card. A rarity-based trade-fueled economy is the goal for the first collection."
+"User Object","user...","Wishlist",null,"User info: actions","Account information? Security-related stuff?"
+"User Object","user...","Wishlist",null,"User info: schedules","Game schedules. Game state updates from servers, user-generated reminders..."
+"User Object","user...","Wishlist",null,"User info",""
+
+"Player Object","player...","Wishlist",null,"Player object data","user_id,player_id,player_name,effects_list.Base object, must have health at minimum."
+
+"Player Object","og_player...","Wishlist",null,"Player info","res_0,res_1,res_2,res_3,res_4, health, deck size, done pile, dead pile, permanents, game_id"
+"Player Object","og_player...","Wishlist",null,"Player info",""
+
+"Game Object","game...","Wishlist",null,"Game object data","game_id,game_turn,player_turn_list,"
+
+"Game Object","og_game...","Wishlist",null,"Game info","turn, turn_counter, turn_history, stack, effects_list, goal_list, resource_list, hand_list, turn_progression_id"
